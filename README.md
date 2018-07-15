@@ -1,49 +1,28 @@
-# TensorFlow iOS Examples
+# Medicmind Multiclass Classifier iOS Example
 
-This folder contains examples of how to build applications for iOS devices using TensorFlow.
+Demonstrates how to incorporate a trained multiclass tensorflow model from Medicminds AI platform (https://www.medicmind.tech) into an iPhone App. The neural network trained detects types of cervix. Returns type1, type2 and type3 and none of these types.
+
+## Installation
+ - Clone Tensorflow onto your Mac (Tensorflow 1.2.0 will work fine) 
+
+ - Place the multiclass_demo code under tensorflow/tensorflow/examples
+
+ - Download the pneumonia model https://ai.medicmind.tech/models/multiclass_demo/frozen_model.pb  or use your own Medicmind model
+
+ - Place frozen_model.pb under /tensorflow/examples/multiclass_demo/camera/data
 
 ## Running the Samples using CocoaPod
  - You'll need Xcode 7.3 or later.
-
- - There are currently three examples: simple, benchmark, and camera. For now,
-   you can download the sample code by cloning the main tensorflow repository
-   (we are planning to make the samples available as a separate repository
-   later).
-
- - From the root of the tensorflow folder, download
-   [Inception v1](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip),
-   and extract the label and graph files into the data folders inside both the
-   simple and camera examples:
-
-```bash
-mkdir -p ~/graphs
-curl -o ~/graphs/inception5h.zip \
- https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip \
- && unzip ~/graphs/inception5h.zip -d ~/graphs/inception5h
-cp ~/graphs/inception5h/* tensorflow/examples/ios/benchmark/data/
-cp ~/graphs/inception5h/* tensorflow/examples/ios/camera/data/
-cp ~/graphs/inception5h/* tensorflow/examples/ios/simple/data/
-```
 
  - Change directory to one of the samples, download the TensorFlow-experimental
    pod, and open the Xcode workspace. Observe: installing the pod can take a
    long time since it is big (~450MB). For example, if you want to run the
    simple example, then:
 ```bash
-cd tensorflow/examples/ios/simple
+cd tensorflow/examples/multiclass_demo/camera
 pod install
-open tf_simple_example.xcworkspace # obs, not the .xcodeproj directory
+open tf_camera_example.xcworkspace # obs, not the .xcodeproj directory
 ```
-
- - Run the simple app in the simulator. You should see a single-screen app with
-   a "Run Model" button. Tap that, and you should see some debug output appear
-   below indicating that the example Grace Hopper image in directory data has
-   been analyzed, with a military uniform recognized.
-
- - Run the other samples using the same process. The camera example requires a
-   real device connected. Once you build and run that, you should get a live
-   camera view that you can point at objects to get real-time recognition
-   results.
 
 ### Troubleshooting
 
