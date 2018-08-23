@@ -13,7 +13,7 @@ Demonstrates how to use a trained multiclass tensorflow model from Medicminds AI
  ```
  To use your own frozen model from Medicmind just replace the frozen_model.pb file in /camera/data and change the infer.py line
 ```
- classes=['Type 1','Type 2','Type 3']
+ classes=['None','Type 1','Type 2','Type 3']
 ```
 
  to the classes you have defined in your multiclass classifier. So if your classes are dogs, cats and mice then line would become
