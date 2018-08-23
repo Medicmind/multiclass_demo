@@ -1,13 +1,34 @@
-# Medicmind Multiclass Classifier iOS Example
+# Medicmind Multiclass Classifier Example
 
-Demonstrates how to incorporate a trained multiclass tensorflow model from Medicminds AI platform (https://www.medicmind.tech) into an iPhone App. The neural network trained detects types of cervix. Returns type1, type2 and type3 and none of these types.
+Demonstrates how to use a trained multiclass tensorflow model from Medicminds AI platform (https://www.medicmind.tech). Includes a python and iPhone app demo. The neural network trained detects types of cervix. Returns type1, type2 and type3 and none of these types.
 
+# Python Demo
+ - Install Tensorflow as per instructions https://www.tensorflow.org/install/
+ 
+ - Download https://ai.medicmind.tech/shared/models/multiclass_demo/frozen_model.pb and place under /camera/data
+ 
+ - Execute
+ ```
+ python infer.py --checkpoint_dir="camera/data/frozen_model.pb" --filename="cervix.jpg"
+ ```
+ To use your own frozen model from Medicmind just replace the frozen_model.pb file in /camera/data and change the infer.py line
+```
+ classes=['Type 1','Type 2','Type 3']
+```
+
+ to the classes you have defined in your multiclass classifier. So if your classes are dogs, cats and mice then line would become
+ ```
+classes = ['dog','cat','mouse']
+```
+
+ 
+# IOS demo
 ## Installation
  - Clone Tensorflow onto your Mac (Tensorflow 1.2.0 will work fine) 
 
  - Place the multiclass_demo code under tensorflow/tensorflow/examples
 
- - Download the pneumonia model https://ai.medicmind.tech/shared/models/multiclass_demo/frozen_model.pb  or use your own Medicmind model
+ - Download the cervix model https://ai.medicmind.tech/shared/models/multiclass_demo/frozen_model.pb  or use your own Medicmind model
 
  - Place frozen_model.pb under /tensorflow/examples/multiclass_demo/camera/data
 
