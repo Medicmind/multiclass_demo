@@ -1,4 +1,4 @@
-# Medicmind Multiclass ClassifierExample
+# Medicmind Multiclass Classifier Example
 
 Demonstrates how to use a trained multiclass tensorflow model from Medicminds AI platform (https://www.medicmind.tech). Includes a python and iPhone app demo. The neural network trained detects types of cervix. Returns type1, type2 and type3 and none of these types.
 
