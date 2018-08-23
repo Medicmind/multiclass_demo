@@ -28,7 +28,7 @@ tf.app.flags.DEFINE_string('filename', '',
 
 FLAGS = tf.app.flags.FLAGS
 
-classes=["Type 1","Type 2","Type 3"]
+classes=["None","Type 1","Type 2","Type 3"]
 
 def load_graph(frozen_graph_filename):
     # We load the protobuf file from the disk and parse it to retrieve the 
