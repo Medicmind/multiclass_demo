@@ -7,7 +7,8 @@ Demonstrates how to use a trained multiclass tensorflow model from Medicminds AI
  
  - Download https://ai.medicmind.tech/shared/models/multiclass_demo/frozen_model.pb and place under /camera/data
  
- - Execute 
+ - Execute
+   python infer.py --checkpoint_dir="camera/data/frozen_model.pb" --filename="cervix.jpg"
  
 # IOS demo
 ## Installation
