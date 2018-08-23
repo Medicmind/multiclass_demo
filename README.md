@@ -3,7 +3,7 @@
 Demonstrates how to use a trained multiclass tensorflow model from Medicminds AI platform (https://www.medicmind.tech). Includes a python and iPhone app demo. The neural network trained detects types of cervix. Returns type1, type2 and type3 and none of these types.
 
 # Python Demo
- - Install python as per instruction https://www.tensorflow.org/install/
+ - Install Tensorflow as per instructions https://www.tensorflow.org/install/
  
  - Download https://ai.medicmind.tech/shared/models/multiclass_demo/frozen_model.pb and place under /camera/data
  
