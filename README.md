@@ -33,9 +33,11 @@ pbtotflite.py
 ```
 Place the frozen_model.pb in camera/data and this python code will generate pruned.lite
 
-Then with the IOS in Tensorflow examples under:
+Then with the IOS image classification app in Tensorflow examples under:
 
+```
 lite/examples/image_classification/ios/ImageClassification
+```
 
 Replace the 'mobilenet_quant_v1_224.tflite' with the 'pruned.lite' model under the folder 'Model' 
 
